@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hospital</string>
+    <string name="textView_greeting">YouHeal Hospital</string>
+    <string name="button_Enter_text">Menu</string>
+    <string name="button">Button</string>
+    <string name="description">description </string>
+    <string name="firstButtonOfMenu">Dr. Sara </string>
+    <string name="secondButtonOfMenu">Dr. Emily </string>
+    <string name="thirdButtonOfMenu">Dr. Ben </string>
+</resources>
