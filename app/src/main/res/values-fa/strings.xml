@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">دکتر</string>
+    <string name="textView_greeting">بیمارستان شفا</string>
+    <string name="button_Enter_text">منو</string>
+    <string name="button">دکمه</string>
+    <string name="description">توضیحات</string>
+    <string name="firstButtonOfMenu">دکتر سارا</string>
+    <string name="secondButtonOfMenu">دکتر امیلی</string>
+    <string name="thirdButtonOfMenu">دکتر بن</string>
+    <string name="doctorName">اسم</string>
+    <string name="doctorAddress">ادرس</string>
+    <string name="doctorPhone">تلفن</string>
+    <string name="button1">ویزیت آنلاین</string>
+    <string name="button2">رزرو نوبت</string>
+    <string name="button3">خانه</string>
+    <string name="button4">علاقه مندی</string>
+</resources>

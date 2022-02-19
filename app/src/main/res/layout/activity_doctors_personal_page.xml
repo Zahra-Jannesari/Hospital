@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorsPersonalPage">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/imageView_avatar"
+        android:layout_width="128dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/avatar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView_Info"
+        android:name="com.zarisa.doctor.DoctorInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_avatar"
+        app:layout_constraintStart_toEndOf="@+id/imageView_avatar"
+        app:layout_constraintTop_toTopOf="@+id/imageView_avatar"
+        app:layout_constraintVertical_bias="0.439"
+        tools:layout="@layout/fragment_doctor_info" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="167dp"
+        android:layout_height="197dp"
+        android:layout_margin="30dp"
+        android:contentDescription="@string/description"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:srcCompat="@drawable/doctoricon"
+        tools:ignore="ImageContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:text="@string/button1"
+        app:icon="@drawable/ic_baseline_wifi_24"
+        app:iconGravity="textTop"
+        app:layout_constraintBottom_toTopOf="@+id/button_3"
+        app:layout_constraintEnd_toStartOf="@+id/button_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:text="@string/button2"
+        app:icon="@drawable/ic_baseline_menu_book_24"
+        app:iconGravity="textTop"
+        app:layout_constraintBottom_toTopOf="@+id/button_4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_1"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:text="@string/button3"
+        app:icon="@drawable/ic_baseline_home_24"
+        app:iconGravity="textTop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/button_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/button_1"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:text="@string/button4"
+        app:icon="@drawable/ic_baseline_favorite_24"
+        app:iconGravity="textTop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_3"
+        app:layout_constraintTop_toBottomOf="@+id/button_2"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
