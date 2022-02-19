@@ -12,6 +12,6 @@ class DoctorsPersonalPage : AppCompatActivity() {
         var view=binding2.root
         setContentView(view)
         var doctorOfThisPage=intent?.getParcelableExtra<Doctor>(DOCTOR)
-        supportActionBar!!.setTitle(doctorOfThisPage!!.name)
+        supportActionBar!!.title = doctorOfThisPage!!.name
     }
 }
