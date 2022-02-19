@@ -11,5 +11,7 @@ class DoctorsPersonalPage : AppCompatActivity() {
         binding2= ActivityDoctorsPersonalPageBinding.inflate(layoutInflater)
         var view=binding2.root
         setContentView(view)
+        var doctorOfThisPage=intent?.getParcelableExtra<Doctor>(DOCTOR)
+        supportActionBar!!.setTitle(doctorOfThisPage!!.name)
     }
 }
