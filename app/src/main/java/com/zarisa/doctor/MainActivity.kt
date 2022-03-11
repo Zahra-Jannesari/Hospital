@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
 import com.zarisa.doctor.databinding.ActivityMainBinding
 const val DOCTOR="doctor"
 class MainActivity : AppCompatActivity(){
+    val viewModel1: ViewModel1 by viewModels()
     lateinit var binding:ActivityMainBinding
     private var menuClicked:Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +28,8 @@ class MainActivity : AppCompatActivity(){
     }
     fun eachButtonOnClick(numberOfButton:Int) {
         val intent=Intent(this,DoctorsPersonalPage::class.java)
-        var doctor=Hospital.testData(numberOfButton)
-        intent.putExtra(DOCTOR,doctor)
+        var id=viewModel1.getId(numberOfButton)
+        intent.putExtra(DOCTOR,id)
         startActivity(intent)
     }
     fun menuButtonOnClick(){
