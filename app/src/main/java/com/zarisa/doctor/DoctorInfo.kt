@@ -29,12 +29,17 @@ class DoctorInfo : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragBinding= FragmentDoctorInfoBinding.inflate(layoutInflater, container, false)
+
+        return fragBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         var id=activity?.intent?.getStringExtra(DOCTOR)
         var doctor=viewModel1.getInfo(id)
         fragBinding.textViewName.text=doctor.name
         fragBinding.textViewAddress.text="Address: ${doctor.personalOffice}"
         fragBinding.textViewPhone.text="Phone: ${doctor.phone}"
-        return fragBinding.root
     }
 
 
